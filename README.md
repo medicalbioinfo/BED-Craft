@@ -23,8 +23,6 @@ BED-Craft requires perl 4 or 5.
 
 <img src="https://github.com/user-attachments/assets/a0baa854-8c7d-4811-835e-2b4973b1f019" alt="example" width="500" />
 
-![Fig1](https://github.com/user-attachments/assets/a0baa854-8c7d-4811-835e-2b4973b1f019)
-
 
 Optional parameters:  
 
