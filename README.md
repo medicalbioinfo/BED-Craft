@@ -38,7 +38,7 @@ You can set the length of the extended region ("buffer") that is set on both sid
 
   <hr>  
     
-## Citation
+### Citation
 If you submit a paper using this tool, please cite Miya F and Kosaki K. (2025) (in preparation).  
 
   <hr>  
