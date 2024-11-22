@@ -17,7 +17,7 @@ You can use it simply by downloading the entire BED-Craft folder (directory).
 BED-Craft requires perl 4 or 5.
 
 # Usage
-cd BED-Craft
+cd BED-Craft<br\>
 perl BED-Craft.pl input.txt
 
 ![Fig1](https://github.com/user-attachments/assets/a6f49219-eec4-4d0e-a3e7-e71934624cf4)
