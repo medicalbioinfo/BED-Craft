@@ -17,13 +17,14 @@ You can use it simply by downloading the entire BED-Craft folder (directory).
 BED-Craft requires perl 4 or 5.
 
 ## Usage
-cd BED-Craft  
+'cd BED-Craft'  
  
-perl BED-Craft.pl input.txt
+'''perl BED-Craft.pl input.txt'''  
 
-![Fig1](https://github.com/user-attachments/assets/a6f49219-eec4-4d0e-a3e7-e71934624cf4)
+![Fig1](https://github.com/user-attachments/assets/a0baa854-8c7d-4811-835e-2b4973b1f019)
 
-Optional parameters:
+
+Optional parameters:  
 
 * -build  
 You can choose the version of the human reference genomes from either hg19, hg38 or CHM13（<hg19|hg38|CHM13>. The default is hg38.  
