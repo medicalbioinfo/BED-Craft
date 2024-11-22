@@ -13,11 +13,11 @@ Details of this tool will be described in a paper by Miya F and Kosaki K (in pre
 SpliceAI source code is provided under the GPLv3 license.
 
 # Installation
-You can use it simply by downloading the entire BED-Craft folder (directory).
+You can use it simply by downloading the entire BED-Craft folder (directory).  
 BED-Craft requires perl 4 or 5.
 
 # Usage
-cd BED-Craft<br\>
+cd BED-Craft  
 perl BED-Craft.pl input.txt
 
 ![Fig1](https://github.com/user-attachments/assets/a6f49219-eec4-4d0e-a3e7-e71934624cf4)
