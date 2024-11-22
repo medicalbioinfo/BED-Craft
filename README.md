@@ -36,10 +36,10 @@ You can set the length of the extended region ("buffer") that is set on both sid
   You can choose whether or not to add "chr" to the chromosome number (<yes|no>). The default is yes.  
   
 
-  <hr>  
+<hr>  
     
 ### Citation
 If you submit a paper using this tool, please cite Miya F and Kosaki K. (2025) (in preparation).  
 
-  <hr>  
+<hr>  
     
