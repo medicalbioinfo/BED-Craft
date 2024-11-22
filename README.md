@@ -26,12 +26,12 @@ BED-Craft requires perl 4 or 5.
 
 Optional parameters:  
 
-* -build  
+* **-build**  
 You can choose the version of the human reference genomes from either hg19, hg38 or CHM13（<hg19|hg38|CHM13>. The default is hg38.  
  
-* -buffer  
+* **-buffer**  
 You can set the length of the extended region ("buffer") that is set on both sides of the genes. The default size is 50000. 
  
-* -chr  
+* **-chr**  
   You can choose whether or not to add "chr" to the chromosome number (<yes|no>). The default is yes.
 
