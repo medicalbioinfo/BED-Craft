@@ -24,7 +24,7 @@ BED-Craft requires perl 4 or 5.
 <img src="https://github.com/user-attachments/assets/a0baa854-8c7d-4811-835e-2b4973b1f019" alt="example" width="500" />
   
   
-Optional parameters:  
+###Optional parameters:  
 
 * **-build**  
 You can choose the version of the human reference genomes from either hg19, hg38 or CHM13（<hg19|hg38|CHM13>. The default is hg38.  
