@@ -9,14 +9,14 @@ Details of this tool will be described in a paper by Miya F and Kosaki K (in pre
 
 
 
-# License
+## License
 SpliceAI source code is provided under the GPLv3 license.
 
-# Installation
+## Installation
 You can use it simply by downloading the entire BED-Craft folder (directory).  
 BED-Craft requires perl 4 or 5.
 
-# Usage
+## Usage
 cd BED-Craft  
 perl BED-Craft.pl input.txt
 
@@ -24,11 +24,12 @@ perl BED-Craft.pl input.txt
 
 Optional parameters:
 
-<ul>
-  <li>-build</li>
-  You can choose the version of the human reference genomes from either hg19, hg38 or CHM13（<hg19|hg38|CHM13>. The default is hg38.
-  <li>-buffer</li>
-You can set the length of the extended region ("buffer") that is set on both sides of the genes. The default size is 50000.
-  <li>-chr</li>
+* -build
+You can choose the version of the human reference genomes from either hg19, hg38 or CHM13（<hg19|hg38|CHM13>. The default is hg38.  
+ 
+* -buffer
+You can set the length of the extended region ("buffer") that is set on both sides of the genes. The default size is 50000. 
+ 
+* -chr
   You can choose whether or not to add "chr" to the chromosome number (<yes|no>). The default is yes.
-</ul>
+
