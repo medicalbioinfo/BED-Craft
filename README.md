@@ -19,7 +19,7 @@ BED-Craft requires perl 4 or 5.
 ## Usage
 ```cd BED-Craft  
  
-perl BED-Craft.pl input.txt```  
+perl BED-Craft.pl input.txt  
 
 ![Fig1](https://github.com/user-attachments/assets/a0baa854-8c7d-4811-835e-2b4973b1f019)
 
