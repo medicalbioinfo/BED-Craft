@@ -10,7 +10,7 @@ Details of this tool will be described in a paper by Miya F and Kosaki K (in pre
 
 
 ## License
-SpliceAI source code is provided under the GPLv3 license.
+BED-Craft code is provided under the GPLv3 license.
 
 ## Installation
 You can use it simply by downloading the entire BED-Craft folder (directory).  
