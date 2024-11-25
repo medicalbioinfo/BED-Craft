@@ -48,7 +48,7 @@ You can set the length of the extended region ("buffer") that is set on both sid
 ### hg38 (GRCh38)
 * MANE transcript: <a href="https://ftp.ncbi.nlm.nih.gov/refseq/MANE/MANE_human/">MANE.GRCh38.v1.4.summary.txt</a>  
 * RefSeq: <a href="https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/">GRCh38_latest_genomic.gtf</a> (GRCh38.p14, Oct16, 2023 updated version)    
-* Ensembl: <a ref="https://ftp.ensembl.org/pub/release-113/gtf/homo_sapiens/">Homo_sapiens.GRCh38.113.chr.gtf</a>  
+* Ensembl: <a href="https://ftp.ensembl.org/pub/release-113/gtf/homo_sapiens/">Homo_sapiens.GRCh38.113.chr.gtf</a>  
 
 ### CHM13 (T2T-CHM13 v2.0)
 * <a href="https://github.com/marbl/CHM13">chm13v2.0_RefSeq_Liftoff_v5.2.gff3</a>  
