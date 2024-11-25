@@ -42,13 +42,13 @@ You can set the length of the extended region ("buffer") that is set on both sid
 ## Version information for the gene annotation used to create the gene location information file for this tool
 
 ### hg19 (GRCh37)
-* RefSeq: RefSeq GCF_000001405.25_GRCh37.p13_genomic.gtf
-* Ensembl: Homo_sapiens.GRCh37.87.chr.gtf
+* RefSeq: <a href="https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh37_latest/refseq_identifiers/">RefSeq GCF_000001405.25_GRCh37.p13_genomic.gtf</a>  
+* Ensembl: <a ref="https://ftp.ensembl.org/pub/grch37/release-87/gtf/homo_sapiens/Homo_sapiens.GRCh37.87.chr.gtf.gz">Homo_sapiens.GRCh37.87.chr.gtf</a>  
 
 ### hg38 (GRCh38)
-* MANE transcript: MANE.GRCh38.v1.4.summary.txt  
-* RefSeq: GRCh38_latest_genomic.gtf (GRCh38.p14, Oct16, 2023 updated version)  
-* Ensembl: Homo_sapiens.GRCh38.113.chr.gtf  
+* MANE transcript: <a href="https://ftp.ncbi.nlm.nih.gov/refseq/MANE/MANE_human/">MANE.GRCh38.v1.4.summary.txt</a>  
+* RefSeq: <a href="https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh38_latest/refseq_identifiers/">GRCh38_latest_genomic.gtf</a> (GRCh38.p14, Oct16, 2023 updated version)    
+* Ensembl: <a ref="https://ftp.ensembl.org/pub/release-113/gtf/homo_sapiens/">Homo_sapiens.GRCh38.113.chr.gtf</a>  
 
 ### CHM13 (T2T-CHM13 v2.0)
 * <a href="https://github.com/marbl/CHM13">chm13v2.0_RefSeq_Liftoff_v5.2.gff3</a>  
@@ -56,7 +56,7 @@ You can set the length of the extended region ("buffer") that is set on both sid
   
 <hr>  
     
-### Citation
+## Citation
 If you submit a paper using this tool, please cite Miya F and Kosaki K. (2025) (in preparation).  
 
 <hr>  
