@@ -37,7 +37,8 @@ You can set the length of the extended region ("buffer") that is set on both sid
 * **-chr**  
   You can choose whether or not to add "chr" to the chromosome number (<yes|no>). The default is yes.  
   
-
+<hr>  
+  
 ## Version information for the gene annotation used to create the gene location information file for this tool
 
 ### hg19 (GRCh37)
