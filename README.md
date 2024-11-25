@@ -53,7 +53,7 @@ You can set the length of the extended region ("buffer") that is set on both sid
 ### CHM13 (T2T-CHM13 v2.0)
 * <a href="https://github.com/marbl/CHM13">chm13v2.0_RefSeq_Liftoff_v5.2.gff3</a>  
   
-Note: In each reference genome build version, the gene location information is overwritten in the order listed at the top.  
+Note: In each reference genome build version, the gene location information in this tool is overwritten in the order listed at the top.  
     
 <hr>  
     
