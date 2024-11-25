@@ -22,7 +22,7 @@ BED-Craft requires perl 4 or 5.
 ```perl BED-Craft.pl input.txt```  
 
 
-![Fig1](https://github.com/user-attachments/assets/83f160e3-b809-4fe9-82fa-7091fce54a05)
+<img src="https://github.com/user-attachments/assets/83f160e3-b809-4fe9-82fa-7091fce54a05" width="550">
 
 
 
