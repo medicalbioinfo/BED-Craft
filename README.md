@@ -59,7 +59,12 @@ You can set the length of the extended region ("buffer") that is set on both sid
 Note: In each reference genome build version, the gene location information in this tool is overwritten in the order listed at the top.  
     
 <hr>  
-    
+
+## Disclaimer  
+This software is provided "as is," and the authors make no warranties regarding its functionality, accuracy, or fitness for any particular purpose. In no event shall the authors or contributors be held liable for any direct, indirect, incidental, special, exemplary, or consequential damages arising in any way from the use of this software, even if advised of the possibility of such damage. By using this repository, you agree to these terms.  
+
+  <hr>  
+  
 ## Citation
 If you submit a paper using this tool, please cite Miya F and Kosaki K. (2025) (in preparation).  
 
