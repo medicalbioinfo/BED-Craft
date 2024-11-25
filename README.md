@@ -38,6 +38,21 @@ You can set the length of the extended region ("buffer") that is set on both sid
   You can choose whether or not to add "chr" to the chromosome number (<yes|no>). The default is yes.  
   
 
+## Version information for the gene annotation used to create the gene location information file for this tool
+
+### hg19 (GRCh37)
+* RefSeq: RefSeq GCF_000001405.25_GRCh37.p13_genomic.gtf
+* Ensembl: Homo_sapiens.GRCh37.87.chr.gtf
+
+### hg38 (GRCh38)
+* MANE transcript: MANE.GRCh38.v1.4.summary.txt  
+* RefSeq: GRCh38_latest_genomic.gtf (GRCh38.p14, Oct16, 2023 updated version)  
+* Ensembl: Homo_sapiens.GRCh38.113.chr.gtf  
+
+### CHM13 (T2T-CHM13 v2.0)
+* <a href="https://github.com/marbl/CHM13">chm13v2.0_RefSeq_Liftoff_v5.2.gff3</a>  
+
+  
 <hr>  
     
 ### Citation
