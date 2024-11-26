@@ -4,7 +4,7 @@ BED-Craft for nanopore adaptive sampling
 <hr>
 
 BED-Craft is a tool that allows you to easily generate BED files, which are required for nanopore adaptive sampling, using multiple gene names as input files.  
-Details of this tool will be described in a paper by Miya F and Kosaki K (in press, 2025) (currently being submitted).
+Details of this tool will be described in a paper by Miya F and Kosaki K (2025?) (currently being submitted).
 
 
 
@@ -66,7 +66,7 @@ This software is provided "as is," and the authors make no warranties regarding 
   <hr>  
   
 ## Citation
-If you submit a paper using this tool, please cite Miya F and Kosaki K. (2025) (in preparation).  
+If you submit a paper using this tool, please cite Miya F and Kosaki K. (2025?) (in preparation).  
 
 <hr>  
     
