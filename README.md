@@ -46,7 +46,7 @@ You can set the length of the extended region ("buffer") that is set on both sid
 
 ### hg19 (GRCh37)
 * RefSeq: <a href="https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh37_latest/refseq_identifiers/">RefSeq GCF_000001405.25_GRCh37.p13_genomic.gtf</a>  
-* Ensembl: <a href="https://ftp.ensembl.org/pub/grch37/release-87/gtf/homo_sapiens/Homo_sapiens.GRCh37.87.chr.gtf.gz">Homo_sapiens.GRCh37.87.chr.gtf</a>  
+* Ensembl: <a href="https://ftp.ensembl.org/pub/grch37/release-87/gtf/homo_sapiens/">Homo_sapiens.GRCh37.87.chr.gtf</a>  
 
 ### hg38 (GRCh38)
 * MANE transcript: <a href="https://ftp.ncbi.nlm.nih.gov/refseq/MANE/MANE_human/">MANE.GRCh38.v1.4.summary.txt</a>  
