@@ -29,7 +29,7 @@ BED-Craft requires perl 4 or 5.
   
 ### Optional parameters:  
 
-```perl BED-Craft.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13>] [-buffer <number>] [-chr <yes|no>]```
+```perl BED-Craft.pl input.txt [-build <hg19|hg38|CHM13>] [-buffer <number>] [-chr <yes|no>]```
 
 * **-build**  
 You can choose the version of the human reference genomes from either hg19, hg38 or CHM13（<hg19|hg38|CHM13>). The default is hg38.  
