@@ -1,10 +1,12 @@
 #!/usr/bin/perl
 
+#v2 gene symbolの大文字と小文字が一致していなくてもターゲットを見つけて書き出すようにした。マウスのゲノムmm10とmm39のアノテーション情報をツール内に配置して実行可能とした。別の種についてもemsemblのgtfファイルから作成すれば対応可能とした。ROIの合計塩基数も書き出すようにした。
+
 # Usage:
 # perl BED-Craft.pl input_gene_symbol_name_file.txt
 
 # Usage option:
-# perl BED-Craft.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]
+# perl BED-Craft.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13|mm10|mm39|other> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]
 
 # BED-Craft for Nanopore adaptive sampling
 # v.1.0
@@ -34,9 +36,10 @@ my ($input) = @ARGV;
 my $filename;
 my $bed_file;
 my %gene = ();
-my $bed_file;
 my $totalBP = 0;
+my $totalROI = 0;
 my $linenum = 0;
+my $miss = 0;
 my %DB;
 
 if($input =~ /(\S+)\.txt/){
@@ -50,24 +53,24 @@ open(OUT1, ">$bed_file") or die $!;
 
 
 if(@ARGV < 1){
-	die "Usage: perl BED-Craft.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]\n";
+	die "Usage: perl BED-Craft.pl input_gene_symbol_name_file.txt [-genome <hg19|hg38|CHM13|mm10|mm39|other> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]\n";
 }
 
-my $build = "hg38";
+my $genome = "hg38";
 my $buffer = "50000";
 my $chr_option = "yes";
 
 GetOptions(
-'build=s' => \$build,
+'genome=s' => \$genome,
 'buffer=s'   => \$buffer,
 'chr=s'   => \$chr_option,
-	) or die "Error in command line arguments\.\n Usage: perl BED-Maker.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]";
+	) or die "Error in command line arguments\.\n Usage: perl BED-Maker.pl input_gene_symbol_name_file.txt [-genome <hg19|hg38|CHM13|mm10|mm39|other> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]";
 
 if ($buffer !~ /^\d+$/) {
-	die "Error: Buffer size is not a number\.\n Usage: perl BED-Craft.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]\n";
+	die "Error: Buffer size is not a number\.\n Usage: perl BED-Craft.pl input_gene_symbol_name_file.txt [-genome <hg19|hg38|CHM13|mm10|mm39|other> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]\n";
 }
 if (($chr_option ne "yes") and ($chr_option ne "no")){
-	die "Error: Wrong chr option\.\n Usage: perl BED-Craft.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]\n";
+	die "Error: Wrong chr option\.\n Usage: perl BED-Craft.pl input_gene_symbol_name_file.txt [-genome <hg19|hg38|CHM13|mm10|mm39|other> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]\n";
 }
 
 my $script_path = $0;
@@ -76,12 +79,16 @@ my $script_dir = dirname($script_path);
 
 my $gene_annot_file = "hg38_gene_annotation\.bed";
 
-if($build eq "hg19"){
+if($genome eq "hg19"){
 	$gene_annot_file = "hg19_gene_annotation\.bed";
-}elsif($build eq "CHM13"){
+}elsif($genome eq "CHM13"){
 	$gene_annot_file = "CHM13_gene_annotation\.bed";
-}elsif($build ne "hg38"){
-	die "Error: Wrong build version\. \n Usage: perl BED-Craft.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]\n";
+}elsif($genome eq "mm10"){
+	$gene_annot_file = "GRCm38_mm10_gene_annotation\.bed";
+}elsif($genome eq "mm39"){
+	$gene_annot_file = "GRCm39_mm39_gene_annotation\.bed";
+}elsif($genome ne "hg38"){
+	$gene_annot_file = $genome;
 }
 
 	my $annotation_path = File::Spec->catfile($script_dir, $gene_annot_file);
@@ -90,7 +97,8 @@ open(FILE1, '<', $annotation_path) or die("The $annotation_path file cannot open
 while(<FILE1>){
 	chomp;
 	my @ensembl = split(/\t/,$_);
-	$DB{$ensembl[4]} = 1;
+	my $ucsymbol = uc($ensembl[4]);
+	$DB{$ucsymbol} = 1;
 }
 close FILE1;
 
@@ -100,10 +108,12 @@ while(<IN>){
 	$linenum++;
 	my @tmp = split(/\t/,$_);
 	if($tmp[0] =~ /\S+/){
-		$gene{$tmp[0]} = 1;
-		if( exists $DB{$tmp[0]}){
+		my $ucinput = uc($tmp[0]);
+		$gene{$ucinput} = 1;
+		if( exists $DB{$ucinput}){
 		}else{
-			print "Warning: "."\"".$tmp[0]."\""." is not included in the annotation file of this build version\."."\n";
+			print "Warning: "."\"".$tmp[0]."\""." is not included in the annotation file of the genome version\."."\n";
+			$miss++;
 		}
 	}
 }
@@ -113,14 +123,17 @@ open(FILE2, '<', $annotation_path) or die("The $gene_annot_file file cannot open
 while(<FILE2>){
 	chomp;
 	my @data = split(/\t/,$_);
-	if( exists $gene{$data[4]}){
+	my $ucsymbol = uc($data[4]);
+	if( exists $gene{$ucsymbol}){
 		my $start = $data[1] - $buffer;
 		if($start < 0){
 			$start = 0;
 		}
 		my $end = $data[2] + $buffer;
-		my $length = $end - $start;
-		$totalBP = $totalBP + $length;
+		my $targetlength = $end - $start;
+		my $genelength = $data[2] - $data[1];
+		$totalROI = $totalROI + $genelength;
+		$totalBP = $totalBP + $targetlength;
 		if($chr_option eq "yes"){
 			print OUT1 $data[0]."\t".$start."\t".$data[2]."\t".$data[4]."_".$data[3]."\t"."0"."\t"."+"."\n";
 			print OUT1 $data[0]."\t".$data[1]."\t".$end."\t".$data[4]."_".$data[3]."\t"."0"."\t"."-"."\n";
@@ -135,7 +148,26 @@ while(<FILE2>){
 }
 close FILE2;
 
-my $GenomicRate = $totalBP / 3117292070 * 100;
+my $success = $linenum - $miss;
 
-print "Input gene count: ".$linenum."\n";
-print "Total targeted length: ".$totalBP. " bp (".sprintf('%0.4f', $GenomicRate)."% of Human genome)"."\n";
+if(($genome eq "hg19") or ($genome eq "hg38") or ($genome eq "CHM13")){
+	my $GenomicRate = $totalBP / 3117292070 * 100;
+	print "Input gene counts: ".$linenum."\n";
+	print "Successfully targeted counts: ".$success."\n";
+	print "Total ROI genes length: ".$totalROI. " bp"."\n";
+	print "Total targeted length: ".$totalBP. " bp (".sprintf('%0.4f', $GenomicRate)."% of Human genome)"."\n";
+	print "The file \"".$bed_file."\" has been output."."\n";
+}elsif(($genome eq "mm10") or ($genome eq "mm39")){
+	my $GenomicRate = $totalBP / 2730881984 * 100;
+	print "Input gene counts: ".$linenum."\n";
+	print "Successfully targeted counts: ".$success."\n";
+	print "Total ROI genes length: ".$totalROI. " bp"."\n";
+	print "Total targeted length: ".$totalBP. " bp (".sprintf('%0.4f', $GenomicRate)."% of Mouse genome)"."\n";
+	print "The file \"".$bed_file."\" has been output."."\n";
+}else{
+	print "Input gene counts: ".$linenum."\n";
+	print "Successfully targeted counts: ".$success."\n";
+	print "Total ROI genes length: ".$totalROI. " bp"."\n";
+	print "Total targeted length: ".$totalBP. " bp"."\n";
+	print "The file \"".$bed_file."\" has been output."."\n";
+}
