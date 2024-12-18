@@ -69,12 +69,19 @@ Note: In each reference genome build version, the gene location information in t
 
 ## Method for Supporting Species Other Than Humans and Mice
 
-For over 200 species other than humans and mouse, a program is provided to generate the desired .bed file using Ensembl GTF files (URL: https://ftp.ensembl.org/pub/current_gtf/). The following shows the procedure using zebrafish (Danio rerio) file as an example.  
+For over 200 species other than humans and mouse, a program is provided to generate the desired .bed file using Ensembl GTF files (URL: https://ftp.ensembl.org/pub/current_gtf/).  
+The following shows the procedure using zebrafish (Danio rerio) file as an example.  
+  
 First, navigate to https://ftp.ensembl.org/pub/current_gtf/danio_rerio and download the file Danio_rerio.GRCz11.113.gtf.gz (or a newer version).  
+  
 Next, use the "print_gene_region_for_Ensembl_gtf.pl" program included in the BED-Craft tool to create a file containing gene location information by executing the following command:  
 ```perl print_gene_region_for_Ensembl_gtf.pl Danio_rerio.GRCz11.113.gtf > Danio_rerio_annotation.bed```  
-Place the resulting file into the BED-Craft folder. Using the file, you can then generate a .bed file for the target gene symbols listed in the "target_gene.txt" file with the following command:  
-```perl BED_Craft.pl target_gene.txt -genome Danio_rerio_annotation.bed```
+  
+Place the resulting file into the BED-Craft folder.  
+  
+Using the file, you can then generate a .bed file for the target gene symbols listed in the "target_gene.txt" file with the following command:  
+```perl BED_Craft.pl target_gene.txt -genome Danio_rerio_annotation.bed```  
+  
 This process creates a .bed file ("target_gene.bed") for adaptive sampling of zebrafish (Danio rerio).  
 
     
