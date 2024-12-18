@@ -67,7 +67,7 @@ Note: In each reference genome build version, the gene location information in t
     
 <hr>  
 
-## Method for Supporting Species Other Than Humans and Mice
+## Method for supporting species other than humans and mouse
 
 For over 200 species other than humans and mouse, a program is provided to generate the desired .bed file using Ensembl GTF files (URL: https://ftp.ensembl.org/pub/current_gtf/).  
 The following shows the procedure using zebrafish (Danio rerio) file as an example.  
