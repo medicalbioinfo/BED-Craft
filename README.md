@@ -4,7 +4,7 @@ BED-Craft for nanopore adaptive sampling
 <hr>
 
 BED-Craft is a tool that allows you to easily generate BED files, which are required for nanopore adaptive sampling, using multiple gene names as input files.  
-Details of this tool will be described in a paper by Miya F and Kosaki K (2025?) (currently being submitted).
+Details of this tool will be described in a paper by Miya F and Kosaki K (2025) (currently being submitted).
 
 
 
@@ -31,7 +31,7 @@ BED-Craft requires perl 4 or 5.
 
 ```perl BED-Craft.pl input.txt [-genome <hg19|hg38|CHM13|mm10|mm39|other>] [-buffer <number>] [-chr <yes|no>]```
 
-* **-build**  
+* **-genome**  
 You can choose the version of the human reference genomes from either hg19, hg38, and CHM13（<hg19|hg38|CHM13>), mouse reference genomes mm10 and mm39 (<mm10|mm39>). The default is hg38.  
  
 * **-buffer**  
@@ -67,6 +67,19 @@ Note: In each reference genome build version, the gene location information in t
     
 <hr>  
 
+## Method for Supporting Species Other Than Humans and Mice
+
+For over 200 species other than humans and mouse, a program is provided to generate the desired .bed file using Ensembl GTF files (URL: https://ftp.ensembl.org/pub/current_gtf/). The following shows the procedure using zebrafish (Danio rerio) file as an example.  
+First, navigate to https://ftp.ensembl.org/pub/current_gtf/danio_rerio and download the file Danio_rerio.GRCz11.113.gtf.gz (or a newer version).  
+Next, use the "print_gene_region_for_Ensembl_gtf.pl" program included in the BED-Craft tool to create a file containing gene location information by executing the following command:  
+```perl print_gene_region_for_Ensembl_gtf.pl Danio_rerio.GRCz11.113.gtf > Danio_rerio_annotation.bed```  
+Place the resulting file into the BED-Craft folder. Using the file, you can then generate a .bed file for the target gene symbols listed in the "target_gene.txt" file with the following command:  
+```perl BED_Craft.pl target_gene.txt -genome Danio_rerio_annotation.bed```
+This process creates a .bed file ("target_gene.bed") for adaptive sampling of zebrafish (Danio rerio).  
+
+    
+<hr>  
+  
 ## Disclaimer  
 This software is provided "as is," and the authors make no warranties regarding its functionality, accuracy, or fitness for any particular purpose. In no event shall the authors or contributors be held liable for any direct, indirect, incidental, special, exemplary, or consequential damages arising in any way from the use of this software, even if advised of the possibility of such damage. By using this repository, you agree to these terms.  
 
