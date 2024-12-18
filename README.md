@@ -92,7 +92,7 @@ This software is provided "as is," and the authors make no warranties regarding 
   <hr>  
   
 ## Citation
-If you submit a paper using this tool, please cite Miya F and Kosaki K. (2025?) (in preparation).  
+If you submit a paper using this tool, please cite Miya F and Kosaki K. (2025) (in preparation).  
 
 <hr>  
     
