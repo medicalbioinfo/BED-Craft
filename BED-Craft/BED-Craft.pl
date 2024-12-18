@@ -1,7 +1,5 @@
 #!/usr/bin/perl
 
-#v2 gene symbolの大文字と小文字が一致していなくてもターゲットを見つけて書き出すようにした。マウスのゲノムmm10とmm39のアノテーション情報をツール内に配置して実行可能とした。別の種についてもemsemblのgtfファイルから作成すれば対応可能とした。ROIの合計塩基数も書き出すようにした。
-
 # Usage:
 # perl BED-Craft.pl input_gene_symbol_name_file.txt
 
