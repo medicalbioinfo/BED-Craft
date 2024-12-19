@@ -31,7 +31,7 @@ BED-Craft requires perl 4 or 5.
 ```perl BED-Craft.pl input.txt [-genome <hg19|hg38|CHM13|mm10|mm39|other>] [-buffer <number>] [-chr <yes|no>]```
 
 * **-genome**  
-You can choose the version of the human reference genomes from either hg19, hg38, and CHM13（<hg19|hg38|CHM13>), mouse reference genomes mm10 and mm39 (<mm10|mm39>). The default is hg38.  
+You can choose the version of the human reference genomes from either hg19, hg38, and CHM13（<hg19|hg38|CHM13>), mouse reference genomes mm10 and mm39 (<mm10|mm39>).  As well as human and mouse, the tool can be used for over 200 other various species. How to support species other than human and mouse is described below. The default is hg38.  
  
 * **-buffer**  
 You can set the length of the extended region ("buffer") that is set on both sides of the genes. The default size is 50000. 
