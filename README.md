@@ -29,6 +29,11 @@ If a message is displayed on the screen, showing the number of targets and the r
   
 The resulting BED file is structured as a six-column file, as shown below:  
 
+| Left Align | Center Align | Right Align |
+|:-----------|:------------:|------------:|
+| Row 1      | Row 1        | Row 1       |
+| Row 2      | Row 2        | Row 2       |
+
 |:-----------|:------------:|------------:|
 | chr1      | 16968721        | 17054032       | SDHB_NM_003000.3_ENST00000375499.8       | 0       | +       |
 | chr1      | 17018721        | 17104032       | SDHB_NM_003000.3_ENST00000375499.8       | 0       | -       |
