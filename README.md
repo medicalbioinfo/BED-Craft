@@ -44,7 +44,11 @@ These six columns represent the following information:
 	Column 5: 0  
 	Column 6: strand (+ or −)  
   
+
+## Input file  
+Please prepare a simple text file as the input file, listing one gene symbol per line (see below figure). It is recommended to use gene symbols assigned by the HUGO Gene Nomenclature Committee (HGNC, https://www.genenames.org). However, the specific gene symbols used may depend on the database source. If a gene symbol in the annotation information file is not recognized by this BED-Craft tool, it will be reported as "not found" in the standard output. In such cases, you may consider searching for synonymous gene names on the NCBI Gene website (https://www.ncbi.nlm.nih.gov/gene) and trying alternative names.  
   
+
 ## Usage
 ```cd BED-Craft```  
  
