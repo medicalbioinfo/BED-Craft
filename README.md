@@ -27,11 +27,11 @@ BED-Craft requires perl 4 or 5.
 If a message is displayed on the screen, showing the number of targets and the results as below, it indicates that the program is running correctly.  
 ![Web_1](https://github.com/user-attachments/assets/3845b89e-a61f-46e2-9ce8-0a9cd3718788)
   
-The resulting BED file is structured as a six-column file, as shown below:
-	chr1    16968721        17054032        SDHB_NM_003000.3_ENST00000375499.8      0       +
-	chr1    17018721        17104032        SDHB_NM_003000.3_ENST00000375499.8      0       -
-	chr1    45279241        45340440        MUTYH_NM_001128425.2_ENST00000710952.2  0       +
-	chr1    45329241        45390440        MUTYH_NM_001128425.2_ENST00000710952.2  0       -
+The resulting BED file is structured as a six-column file, as shown below:  
+	chr1    16968721        17054032        SDHB_NM_003000.3_ENST00000375499.8      0       +  
+	chr1    17018721        17104032        SDHB_NM_003000.3_ENST00000375499.8      0       -  
+	chr1    45279241        45340440        MUTYH_NM_001128425.2_ENST00000710952.2  0       +  
+	chr1    45329241        45390440        MUTYH_NM_001128425.2_ENST00000710952.2  0       -  
   
 These six columns represent the following information:
   Column 1: chromosome  
