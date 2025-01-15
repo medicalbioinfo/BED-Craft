@@ -36,6 +36,7 @@ The resulting BED file is structured as a six-column file, as shown below:
 | chr1      | 17018721        | 17104032       | SDHB_NM_003000.3_ENST00000375499.8       | 0       | -       |
 | chr1      | 45279241        | 45340440       | MUTYH_NM_001128425.2_ENST00000710952.2       | 0       | +       |
 | chr1      | 45329241        | 45390440       | MUTYH_NM_001128425.2_ENST00000710952.2       | 0       | -       |
+| ...      |         |        |        |        |        |
   
 These six columns represent the following information:  
   Column 1: chromosome  
