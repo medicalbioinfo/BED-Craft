@@ -26,7 +26,7 @@ BED-Craft requires perl 4 or 5.
 3.	The folder includes sample files such as "Example_ACMG_SF3.2_gene_list.txt". Use the example file to execute the following command.  
  ```perl ./BED-Craft/BED-Craft.pl Example_ACMG_SF3.2_gene_list.txt```  
 If a message is displayed on the screen, showing the number of targets and the results as below, it indicates that the program is running correctly.  
-![Web_1](https://github.com/user-attachments/assets/3845b89e-a61f-46e2-9ce8-0a9cd3718788)
+<img src="https://github.com/user-attachments/assets/3845b89e-a61f-46e2-9ce8-0a9cd3718788" width="550">
   
 The resulting BED file is structured as a six-column file, as shown below:  
 
