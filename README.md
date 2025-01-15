@@ -4,7 +4,7 @@ BED-Craft for nanopore adaptive sampling
 <hr>
 
 BED-Craft is a tool that allows you to easily generate BED files, which are required for nanopore adaptive sampling, using multiple gene names as input files.  
-Details of this tool will be described in a paper by Miya F and Kosaki K (2025) (currently being submitted).
+Details of this tool will be described in a paper by Miya F and Kosaki K (2025) (Under revision).
 
 
 
@@ -15,6 +15,18 @@ BED-Craft code is provided under the GPLv3 license.
 ## Installation
 You can use it simply by downloading the entire BED-Craft folder.  
 BED-Craft requires perl 4 or 5.
+
+## Getting started
+1. BED-Craft source code can be downloaded from GitHub: named releases from <a href="https://github.com/medicalbioinfo/BED-Craft/releases/">https://github.com/medicalbioinfo/BED-Craft/releases/</a>.  
+  
+2. Place the downloaded and extracted folder (e.g., BED-Craft-2.0) in an appropriate directory (e.g., /home/miya/BED-Craft-2.0), and navigate to that directory using the command line.  
+```cd /home/miya/BED-Craft-2.0```
+
+3.	The folder includes sample files such as "Example_ACMG_SF3.2_gene_list.txt". Use the example file to execute the following command.  
+ ```perl ./BED-Craft/BED-Craft.pl Example_ACMG_SF3.2_gene_list.txt```  
+If a message is displayed on the screen, showing the number of targets and the results as below, it indicates that the program is running correctly.  
+![web_1](https://github.com/user-attachments/assets/384b51c0-b22e-421f-a881-292c7082f611)
+
 
 ## Usage
 ```cd BED-Craft```  
