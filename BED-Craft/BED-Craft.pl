@@ -7,7 +7,7 @@
 # perl BED-Craft.pl input_gene_symbol_name_file.txt [-build <hg19|hg38|CHM13|mm10|mm39|other> (default: hg38)] [-buffer <number> (default: 50000)] [-chr <yes|no> (default: yes)]
 
 # BED-Craft for Nanopore adaptive sampling
-# v.1.0
+# v.2.0
 # Copyright (C) 2024-2025 Fuyuki Miya
 #
 # This program is free software: you can redistribute it and/or modify
