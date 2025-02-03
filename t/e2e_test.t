@@ -6,7 +6,7 @@ use File::Temp qw(tempfile tempdir);
 use File::Basename;
 
 # スクリプトのパス
-my $script = "../BED-Craft.pl";
+my $script = "BED-Craft/BED-Craft.pl";
 
 
 
