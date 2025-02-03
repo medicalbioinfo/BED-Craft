@@ -5,7 +5,7 @@ use File::Temp qw(tempfile tempdir);
 use IPC::Open3;
 
 # BED-Craftスクリプトのパス
-my $script = "../BED-Craft.pl";
+my $script = "BED-Craft/BED-Craft.pl";
 
 # テスト用の入力ファイルを作成
 my ($fh, $filename) = tempfile();
