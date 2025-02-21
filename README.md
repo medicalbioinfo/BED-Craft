@@ -127,7 +127,7 @@ This software is provided "as is," and the authors make no warranties regarding 
   <hr>  
   
 ## Citation
-If you submit a paper using this tool, please cite <a href="https://doi.org/10.1186/s13104-025-07152-z">Miya F and Kosaki K, BMC Res. Notes, 18, 79 (2025)<a/>.  
+If you submit a paper using this tool, please cite <a href="https://doi.org/10.1186/s13104-025-07152-z">Miya F and Kosaki K, <I>BMC Res. Notes</I>, <b>18</b>, 79 (2025)<a/>.  
 
 <hr>  
     
